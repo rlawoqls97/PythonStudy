@@ -48,14 +48,34 @@ import math
 # list = [1, 3, 5, 7, 9, 11, 3]
 # print(searchMany(list, 2))
 
-# def stuInfo(a, no, name):
-#     no_n = len(no)
-#     name_n = len(name)
-#     for i in range (0, no_n):
-#         if a == no[i]:
-#             return name[i]
-#     return "?"
+# def fin_min(a):
+#     n = len(a)
+#     min_idx = 0;
+#     for i in range(1, n):
+#         if a[i] < a[min_idx]:
+#             min_idx = i
+#     return min_idx
 
-# stu_no = [39, 14, 67, 105]
-# stu_name = ["Justin", "John", "Mike", "Summer"]
-# print(stuInfo(10, stu_no, stu_name))
+# def sel_sort(a):
+#     result =[]
+#     while(a):
+#         min_idx = fin_min(a)
+#         value = a.pop(min_idx)
+#         result.append(value)
+#     return result
+
+# d = [3, 2, 5, 1, 4, 6, 8, 7, 9, 11, 10]
+# print(sel_sort(d))
+
+def sel_sort(a):
+    n = len(a)
+    for i in range(0, n - 1):
+        min_idx = i
+        for j in range(i, n):
+            if a[j] < a[min_idx]:
+                min_idx = j
+                a[i], a[min_idx] = a[min_idx], a[i]
+                
+l = [3, 5, 6, 1, 2, 7, 12, 11]
+sel_sort(l)
+print(l)
