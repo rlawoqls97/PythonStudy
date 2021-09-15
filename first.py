@@ -1,4 +1,7 @@
-import math
+# Study python because of Coding test
+# Algorithm with python
+
+
 
 # def gcd(a, b):
 #     if b == 0:
