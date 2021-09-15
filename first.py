@@ -67,15 +67,47 @@ import math
 # d = [3, 2, 5, 1, 4, 6, 8, 7, 9, 11, 10]
 # print(sel_sort(d))
 
-def sel_sort(a):
-    n = len(a)
-    for i in range(0, n - 1):
-        min_idx = i
-        for j in range(i, n):
-            if a[j] < a[min_idx]:
-                min_idx = j
-                a[i], a[min_idx] = a[min_idx], a[i]
+# def sel_sort(a):
+#     n = len(a)
+#     for i in range(0, n - 1):
+#         min_idx = i
+#         for j in range(i, n):
+#             if a[j] < a[min_idx]:
+#                 min_idx = j
+#                 a[i], a[min_idx] = a[min_idx], a[i]
                 
-l = [3, 5, 6, 1, 2, 7, 12, 11]
-sel_sort(l)
-print(l)
+# l = [3, 5, 6, 1, 2, 7, 12, 11]
+# sel_sort(l)
+# print(l)
+
+# def avg(a, b, c):
+#     avg_p = (a + b + c) / 3
+#     return avg_p
+
+# kor = input("당신의 국어 성적은? ")
+# kor = float(kor)
+# eng = input("당신의 영어 성적은? ")
+# eng = float(eng)
+# math = input("당신의 수학 성적은? ")
+# math = float(math)
+# avg_p = avg(kor, eng, math)
+# print("3개의 성적의 평균은", avg_p, "입니다.")
+
+# def name_3(a):
+#     print(name[0] * 5)
+#     print(name[1] * 5)
+#     print(name[2] * 5)
+#     return 
+# name = input("이름 3 글자를 입력하세요 ")
+# print(name_3(name))
+
+def name_age_belong(a, b, c):
+    print("당신의 이름은", a)
+    print(b, "에 소속되어 있으시군요")
+    print("당신의 나이는", 2017 - c, "세, 맞죠?")
+    
+    
+name = input("당신의 이름을 입력하세요 ")
+belong = input("당신의 소속 기관을 입력하세요 ")
+birthday = int(input("당신이 출생년도를 입력하세요 "))
+name_age_belong(name, belong, birthday)
