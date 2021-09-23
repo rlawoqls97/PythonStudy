@@ -307,3 +307,25 @@
 #     print("BMI지수는", bmi, "이며 비만2 상태입니다.")
 # else:
 #     print("BMI지수는", bmi, "이며 심각한 비만3 상태입니다.")
+
+# kor = float(input("국어성적 입력: "))
+# eng = float(input("영어성적 입력: "))
+# math = float(input("수학성적 입력: "))
+# avg = (kor + eng + math) / 3
+
+# if kor < 50 or eng < 50 or math < 50:
+#     print("과락")
+# elif avg >= 60:
+#     print("합격")
+# else:
+#     print("불합격")
+
+# mon = int(input("월을 입력하세요: "))
+# if mon == 1 or mon == 3 or mon == 5 or mon == 7 or mon == 8 or mon == 10 or mon == 12:
+#     print("31일 까지")
+# elif mon == 2:
+#     print("28일 또는 29일 까지")
+# elif mon == 4 or mon == 6 or mon == 9 or mon == 11:
+#     print("30일 까지")
+# else:
+#     print("오류")

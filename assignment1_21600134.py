@@ -5,7 +5,7 @@ if float(sleep_hour) < 0:
 # 2.
 print("당신이 입력한 잔 시간은 ", sleep_hour, ", ", "Bool값으로 변환하면 " ,bool(sleep_hour), sep='')
 # 3.
-print("당신이 입력한 잔 시간은 ", float(sleep_hour), ", ", "Bool값으로 변환하면 " ,bool(sleep_hour), sep='')
+print("당신이 입력한 잔 시간은 ", float(sleep_hour), ", ", "Bool값으로 변환하면 " ,bool(float(sleep_hour)), sep='')
 # 6.
 if float(sleep_hour) == 0:
     why_nsleep = input("잠을 못잔 이유가 무엇인가요? 숙제, 시험, 스트레스, 불면증, 그외의 이유를 입력해주세요: ")
@@ -32,7 +32,7 @@ list = []
 if l < 6:
     print("6글자 이상 입력해주세요")
 # 7. 
-if 0 < float(sleep_hour) <= 6 and m_walk <= 8000:
+if 0 < float(sleep_hour) <= 6 and 0 <= m_walk <= 8000:
     for i in range(1, l - 1):
         mes_l[i] = '+'
     mes_l_to_str = ''.join(mes_l)
@@ -49,13 +49,15 @@ if 9 <= float(sleep_hour) < 24:
     if int(fav_num) < 2 or int(fav_num) > 9:
         print("2에서 9 사이의 숫자를 입력해 주세요")
 # 11.
-if m_walk >= 8000 and avg >= 1000 and (int(fav_num) % 2 == 0 or int(fav_num) % 3) ==0:
-    if int(fav_num) % 6 == 0 :
-        print("2의 배수이며 동시의 3의 배수인 6이 입력되었습니다. 출력은 파이팅 문구인", mes, "을(를) 출력합니다.")
+if float(sleep_hour) >= 9 and m_walk >= 8000 and avg >= 1000 and (int(fav_num) % 2 == 0 or int(fav_num) % 3 ==0) and int(fav_num )!= 6:
     for i in range(0, int(fav_num)):
         list.append(mes_l[i])
         mes_l_to_str = ''.join(list)
     print("좋아하는 숫자까지의 파이팅 문구는", mes_l_to_str, "입니다")
+elif m_walk >= 8000 and avg >= 1000 and (int(fav_num) % 4 == 0 or int(fav_num) % 5 == 0 or int(fav_num) % 7 == 0):
+    print(mes * int(fav_num))    
+if float(sleep_hour) >= 9 and m_walk >= 8000 and avg >= 1000 and int(fav_num) % 6 == 0 :
+    print("2의 배수이며 동시의 3의 배수인 6이 입력되었습니다. 출력은 파이팅 문구인", mes, "을(를) 출력합니다.")
 # 12.
 if float(sleep_hour) >= 9 and m_walk >= 8000 and avg < 1000:
     print("오늘 깨어 있었던 시간은", float(24 - float(sleep_hour)), "평균 걸음수는", avg, "입니다.")
