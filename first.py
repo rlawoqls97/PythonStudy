@@ -329,3 +329,103 @@
 #     print("30일 까지")
 # else:
 #     print("오류")
+
+# def quick_sort(a):
+#     n = len(a)
+#     if n <= 1:
+#         return a
+#     piv = a[-1]
+#     g1 = []
+#     g2 = []
+#     for i in range(0, n - 1):
+#         if a[i] < piv:
+#             g1.append(a[i])
+#         else:
+#             g2.append(a[i])
+#     return quick_sort(g1) + [piv] + quick_sort(g2)
+
+# l = [3, 7, 2, 5, 6, 1, 10, 19, 22, 35, 4]
+# print(quick_sort(l))
+
+# def quick_sort_sub(a, start, end):
+#     if end - start <= 0:
+#         return 
+#     pivot = a[end]
+#     i = start
+#     for j in range(start, end):
+#         if a[j] < pivot:
+#             a[i], a[j] = a[j], a[i]
+#             i += 1
+#     a[i], a[end] = a[end], a[i]
+    
+#     quick_sort_sub(a, start, i - 1)
+#     quick_sort_sub(a, i + 1, end)
+# def quick_sort(a):
+#     quick_sort_sub(a, 0, len(a) - 1)
+# l = [3, 2, 7, 8, 10, 11, 21, 1, 2, 5, 4]
+# quick_sort(l)
+# print(l)
+
+# def bubble_sort_failed(a):
+#     n = len(a)
+#     g = []
+#     if n <= 1:
+#         return a
+#     for i in range(0, n - 1):
+#         if a[i] > a[i + 1]:
+#             a[i], a[i + 1] = a[i + 1], a[i]
+#             g.append(a[i])
+#     return bubble_sort_failed(g)
+# l = [1, 3, 54, 6, 2, 4, 7]
+# print(bubble_sort_failed(l))
+
+# def bubble_sort(a):
+#     n = len(a)
+#     while True:
+#         changed = False
+#         for i  in range(0, n - 1):
+#             if a[i] > a[i + 1]:
+#                 a[i], a[i + 1] = a[i + 1], a[i]
+#                 changed = True
+#         if changed == False:
+#             return
+
+# l = [2, 4, 5, 1, 3]
+# bubble_sort(l)
+# print(l)
+
+# def binary_search(a, x):
+#     start = 0
+#     end = len(a) - 1
+    
+#     while start <= end:
+#         mid = (start + end) // 2
+#         if x == a[mid]:
+#             return mid
+#         elif x > a[mid]:
+#             start = mid + 1
+#         else:
+#             end = mid - 1
+            
+#     return -1
+
+# l = [1, 2, 4, 5, 7, 9, 11, 13, 14, 17, 19, 20]
+# print(binary_search(l, 4))
+# print(binary_search(l, 3))
+
+# def binary_search_sub(a, x, start, end):
+#     if start > end:
+#         return -1
+#     mid = (start + end) // 2
+#     if x == a[mid]:
+#         return mid
+#     elif x > a[mid]:
+#         return binary_search_sub(a, x, mid + 1, end)
+#     elif x < a[mid]:
+#         return binary_search_sub(a, x, start, mid - 1)
+
+# def binary_search(a, x):
+#     return binary_search_sub(a, x, 0, len(a) - 1)
+    
+# l = [1, 2, 3, 5, 7, 8, 11, 13, 15, 17, 19, 21, 22, 23, 24]
+# print(binary_search(l, 3))
