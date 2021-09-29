@@ -1,7 +1,8 @@
+# ====================================== #
 # Study python because of Coding test
 # Algorithm with python
 # 코딩테스트를 파이썬으로 치루기 위한 공부
-
+# ====================================== #
 
 
 # def gcd(a, b):
@@ -429,3 +430,38 @@
     
 # l = [1, 2, 3, 5, 7, 8, 11, 13, 15, 17, 19, 21, 22, 23, 24]
 # print(binary_search(l, 3))
+
+# def palindrome_with_stack_queue(s):
+#     qu = []
+#     st = []
+#     for x in s:
+#         if x.isalpha():
+#             qu.append(x.lower())
+#             st.append(x.lower())
+            
+#     while qu:
+#         if qu.pop(0) != st.pop():
+#             return False
+#     return True
+
+# print(palindrome_with_stack_queue("WOWOW"))
+
+# def palindrome(s):
+#     n = len(s)
+#     i = 0
+#     j = n - 1
+#     while i < j:
+#         if s[i].isalpha() == False:
+#             i += 1
+#         elif s[j].isalpha() == False:
+#             j -= 1
+#         elif s[i].lower() != s[j].lower():
+#             return False
+#         else:
+#             i += 1
+#             j -= 1
+#     return True
+# print(palindrome("132"))
+# print(palindrome("Abcba"))
+# print(palindrome("ajsdlfjasdnfl"))
+    
