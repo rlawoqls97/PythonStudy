@@ -464,4 +464,52 @@
 # print(palindrome("132"))
 # print(palindrome("Abcba"))
 # print(palindrome("ajsdlfjasdnfl"))
+
+# num_ = 0
+# cnt = 1
+# sum = 0
+# while num_ <= 0 :
+#     num_ = int(input("정수를 몇개 입력 할까요? "))
+# while cnt <= num_:
+#     num = float(input("숫자를 입력해주세요: "))
+#     cnt += 1
+#     sum += num
     
+# print("입력한 숫자의 평균은 = ", sum / num_)
+
+# name = ' '
+# cnt = 1
+# while name[0] != '김' and name[0] != '최' and name[0] != '이' and cnt <= 5:
+#     name = input("이름을 입력해 주세요 ")
+#     cnt += 1
+
+# if cnt > 5:
+#     print("이름은 5번까지 입력할 수 있습니다.")
+# else:
+#     print("성씨는 김, 이, 최 중에 있습니다.")
+
+# #1
+# for i in range(0, 11):
+#     print("*" * i)
+
+# #2
+# for i in range(10, 0, -1):
+#     print("*" * i)
+
+# i = 0
+# for i in range(1, 11):
+#     print(' ' * (10 - i), '*' * (i * 2), ' ' * (10 - i))
+
+# fruit = input("과일 이름을 영어로 입력해주세요: ")
+# cnt = 0
+
+# for char in fruit:
+#     if char == 'a':
+#         cnt += 1
+    
+# print(cnt, "개입니다.")
+
+# dan = int(input("몇 단 까지 출력하고 싶은지 숫자로 입력해주세요: "))
+# for i in range(2, dan + 1):
+#     for j in range(1, 10):
+#         print(i, "X", j, "=", i * j)
