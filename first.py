@@ -513,3 +513,35 @@
 # for i in range(2, dan + 1):
 #     for j in range(1, 10):
 #         print(i, "X", j, "=", i * j)
+
+# def find_same_name(a):
+#     name_dic = {}
+#     for name in a:
+#         if name in name_dic:
+#             name_dic[name] += 1
+#         else:
+#             name_dic[name] = 1
+            
+#     result = set()
+#     for name in name_dic:
+#         if name_dic[name] >= 2:
+#             result.add(name)
+            
+#     return result
+
+# name = ["Tom", "J", "H", "H", "K", "P"]
+# print(find_same_name(name))
+
+# def find_name(a):
+#     cnt = int(input("학생 번호를 입력해주세요: "))
+#     if cnt in a:
+#         print(a[cnt])
+#     else:
+#         print("???")
+# name_ = {
+#     39 : "Justin",
+#     14 : "John",
+#     67 : "Mike",
+#     105 : "Summer"
+# }
+# find_name(name_)
