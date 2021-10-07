@@ -545,3 +545,202 @@
 #     105 : "Summer"
 # }
 # find_name(name_)
+
+# def print_all_friends(g, start):
+#     qu = []
+#     done = set()
+#     qu.append(start)
+#     done.add(start)
+#     while qu:
+#         p = qu.pop(0)
+#         print(p)
+#         for x in g[p]:
+#             if x not in done:
+#                 qu.append(x)
+#                 done.add(x)
+                
+# fr_info = {
+#     "Summer" : ["John", "Justin", "Mike"],
+#     "John" : ["Summer", "Justin"],
+#     "Justin" : ["John", "Summer", "Mike", "May"],
+#     "Mike" : ["Summer", "Justin"],
+#     "May" : ["Justin", "Kim"],
+#     "Kim" : ["May"],
+#     "Tom" : ["Jerry"],
+#     "Jerry" : ["Tom"]
+# }
+
+# print_all_friends(fr_info, "Jerry")
+# print()
+# print_all_friends(fr_info, "Summer")
+
+# def print_all_friends_friendship(g, start):
+#     qu = []
+#     done = set()
+#     qu.append((start, 0))
+#     done.add(start)
+#     while qu:
+#         (p, d) = qu.pop(0)
+#         print(p, d)
+#         for x in g[p]:
+#             if x not in done:
+#                 qu.append((x, d + 1))
+#                 done.add(x)
+                
+# fr_info = {
+#     "Summer" : ["John", "Justin", "Mike"],
+#     "John" : ["Summer", "Justin"],
+#     "Justin" : ["John", "Summer", "Mike", "May"],
+#     "Mike" : ["Summer", "Justin"],
+#     "May" : ["Justin", "Kim"],
+#     "Kim" : ["May"],
+#     "Tom" : ["Jerry"],
+#     "Jerry" : ["Tom"]
+# }
+
+# print_all_friends_friendship(fr_info, "Jerry")
+# print()
+# print_all_friends_friendship(fr_info, "Summer")
+
+# def find_graph_algo(g, start):
+#     qu = []
+#     done = set()
+#     qu.append(start)
+#     done.add(start)
+#     while qu:
+#         p = qu.pop(0)
+#         print(p)
+#         for x in g[p]:
+#             if x not in done:
+#                 qu.append(x)
+#                 done.add(x)
+
+
+# graph_info = {
+#     "1" : ["2", "3"],
+#     "2" : ["1", "4", "5"],
+#     "3" : ["1"],
+#     "4" : ["2"],
+#     "5" : ["2"]
+# }
+# find_graph_algo(graph_info, "1")
+
+##################################################BFS##################################################
+# graph = dict()
+ 
+# graph['A'] = ['B', 'C']
+# graph['B'] = ['A', 'D']
+# graph['C'] = ['A', 'G', 'H', 'I']
+# graph['D'] = ['B', 'E', 'F']
+# graph['E'] = ['D']
+# graph['F'] = ['D']
+# graph['G'] = ['C']
+# graph['H'] = ['C']
+# graph['I'] = ['C', 'J']
+# graph['J'] = ['I']
+
+# def bfs(graph, start_node):
+#     need_visited, visited = [], []
+#     need_visited.append(start_node)
+    
+    
+#     while need_visited:
+#         node = need_visited[0]
+#         del need_visited[0]
+        
+#         if node not in visited:
+#             visited.append(node)
+#             need_visited.extend(graph[node])
+            
+#     return visited
+
+
+# print(bfs(graph, 'A'))
+
+##################################################DFS##################################################
+
+# graph = dict()
+ 
+# graph['A'] = ['B', 'C']
+# graph['B'] = ['A', 'D']
+# graph['C'] = ['A', 'G', 'H', 'I']
+# graph['D'] = ['B', 'E', 'F']
+# graph['E'] = ['D']
+# graph['F'] = ['D']
+# graph['G'] = ['C']
+# graph['H'] = ['C']
+# graph['I'] = ['C', 'J']
+# graph['J'] = ['I']
+
+# def dfs(graph, start_node):
+     
+#     ## 기본은 항상 두개의 리스트를 별도로 관리해주는 것
+#     need_visited, visited = list(), list()
+ 
+#     ## 시작 노드를 시정하기 
+#     need_visited.append(start_node)
+    
+#     ## 만약 아직도 방문이 필요한 노드가 있다면,
+#     while need_visited:
+ 
+#         ## 그 중에서 가장 마지막 데이터를 추출 (스택 구조의 활용)
+#         node = need_visited.pop()
+        
+#         ## 만약 그 노드가 방문한 목록에 없다면
+#         if node not in visited:
+ 
+#             ## 방문한 목록에 추가하기 
+#             visited.append(node)
+ 
+#             ## 그 노드에 연결된 노드를 
+#             need_visited.extend(graph[node])
+            
+#     return visited
+
+# print(dfs(graph, 'A'))
+
+# def dfs_recursive(graph, start, visited = []):
+#     ## 데이터를 추가하는 명령어 / 재귀가 이루어짐 
+#     visited.append(start)
+ 
+#     for node in graph[start]:
+#         if node not in visited:
+#             dfs_recursive(graph, node, visited)
+#     return visited
+
+# maze = {
+#     'a' : ['e'],
+#     'b' : ['c', 'f'],
+#     'c' : ['b', 'd'],
+#     'd' : ['c'],
+#     'e' : ['a', 'i'],
+#     'f' : ['b', 'g', 'i'],
+#     'g' : ['f', 'h'],
+#     'h' : ['g', 'l'],
+#     'i' : ['e', 'm'],
+#     'j' : ['f', 'k', 'n'],
+#     'k' : ['j', 'o'],
+#     'l' : ['h', 'p'],
+#     'm' : ['i', 'n'],
+#     'n' : ['m', 'j'],
+#     'o' : ['k'],
+#     'p' : ['i']
+# }
+
+# def solve_maze(g, start, end):
+#     qu = []
+#     done = set()
+#     qu.append(start)
+#     done.add(start)
+#     while qu:
+#         p = qu.pop(0)
+#         v = p[-1]
+#         if v == end:
+#             return p
+#         for x in g[v]:
+#             if x not in done:
+#                 qu.append(p + x)
+#                 done.add(x)
+#     return "?"
+
+# print(solve_maze(maze, 'a', 'p'))
