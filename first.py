@@ -744,3 +744,271 @@
 #     return "?"
 
 # print(solve_maze(maze, 'a', 'p'))
+
+# import turtle
+# wn = turtle.Screen()
+# wn.bgcolor("lightpink")
+# a = turtle.Turtle()
+# a.color("grey")
+# a.pensize(5)
+# for i in range(20, 110, 20):
+#     a.penup()
+#     a.goto(i, i)
+#     a.pendown()
+#     for j in range(4):
+#         a.forward(120)
+#         a.left(90)
+        
+# import turtle
+
+# def square(t, size, color):
+#     t.color(color)
+#     for i in range(4):
+#         t.forward(size)
+#         t.right(90)
+        
+# t1 = turtle.Turtle()
+# t1.pensize(5)
+# colors = ['red', 'orange', 'yellow', 'green', 'blue', 'violet', 'darkgreen', 'hotpink', 'grey', 'black']
+# i = 25
+# for color in colors:
+#     square(t1, i, color)
+#     i+=25
+
+# import turtle
+# t=turtle.Turtle()
+# def drawPoly(sideL, num, color):
+#     t.color(color)
+#     turn = 360/num
+#     for i in range(num):
+#         t.pendown()
+#         t.forward(sideL)
+#         t.right(turn)
+# t.penup()
+# t.setposition(-50, 0)
+# drawPoly(50, 5, 'blue')
+# t.penup()
+# t.setposition(100, 0)
+# drawPoly(50, 8, 'hotpink')
+
+# import random
+
+# def random_picker(lists, number):
+#     for i in range(number):
+#         print(random.choice(lists))
+        
+# num_list = [3, 1, 7, 11, 25, 5, 4, 9]
+
+# random_picker(num_list, 3)
+
+# import random
+
+# def gen_random(a, b):
+
+#     r = random.randrange(a,b)
+#     c = chr(65 + r)
+#     print(r, c)
+
+# for i in range(10):
+#     gen_random(i + 1, i + 10)
+
+# from datetime import date
+
+# def cal_birthday(month, day):
+#     today = date.today()
+#     birthday = date(today.year, month, day)
+#     due = birthday - today
+#     if due.days < 0 :
+#         next_birthday = date(today.year + 1, birthday.month, birthday.day)
+#         due = next_birthday - today
+#     print("생일까지 남은 날짜는: ", due.days)
+
+# import math
+# import cmath
+# def deter(a, b, c):
+#     return math.pow(b, 2) - 4*a*c
+
+# def roots_formula(a, b, c):
+#     if deter(a,b,c) >= 0:
+#         root01 = (-b + math.sqrt(deter(a,b,c)))/ (2*a)
+#         root02 = (-b - math.sqrt(deter(a,b,c)))/ (2*a)
+#     else:
+#         root01_real = -b/(2*a)
+#         root01_imag = (math.sqrt(math.fabs(deter(a,b,c))))/ (2*a)
+#         root02_real = -b/(2*a)
+#         root02_imag = (math.sqrt(math.fabs(deter(a,b,c))))/ (2*a)
+#         root01 = root01_real + root01_imag * 1j
+#         root02 = root02_real - root02_imag * 1j
+#     return [root01, root02]
+
+# def fibo(n) :
+#     if n == 1 or n == 2 :
+#         return 1
+#     else :
+#         return fibo(n-1) + fibo(n-2)
+# for i in range(1,15) :
+#     print(fibo(i))
+
+# def mult3(n) :
+#     mul=0
+#     if n >=1 :
+#         for I in range(n):
+#             mul=mul+3
+#     return mul
+# for i in range(1,10) :
+#     print(mult3(i))
+
+# import random
+# namelist= []
+# oxlist= []
+# count = int(input("인원을 입력하세요: "))
+# for i in range (count) :
+#     name = input("이름을 입력하세요: ")
+#     namelist.append(name)
+# for i in range (count) :
+#     oxlist.append(random.choice(['o', 'x']))
+# tname = tuple(namelist)
+# print(tname)
+# t = list(zip(tname, oxlist))
+# print(t)
+
+# s = 'abcdefghijklmnopqrstuvwxyz'
+# Num = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25]
+# Tu_SNum = list(zip(s, Num))
+# print(Tu_SNum)
+
+# Subjects = {'김경미':['수학','과학'],'최영희':['영어', '수학'], '강동원':'영어', '정필수':['사회', '역사'], '박희수':'국어', '이승철':['수학', '과학']}
+# lec = input('담당교사명을 입력하시오: ')
+# print(Subjects[lec])
+
+# def find_teacher(sub):
+#     Subjects = {'김경미':['수학','과학'],'최영희':['영어', '수학'], '강동원':'영어', '정필수':['사회', '역사'], '박희수':'국어', '이승철':['수학', '과학']}
+#     teacher = []
+#     for key in Subjects.keys():
+#         if sub in Subjects[key]:
+#             teacher.append(key)
+#     return teacher
+# sub = input('과목을 입력하시오: ')
+# print(find_teacher(sub))
+
+# inf = open('number.txt')
+# s = inf.readlines()
+# total = 0
+# mean = 0
+# for i in range(len(s)):
+#     total = total + int(s[i])
+# mean = total / len(s)
+# print('Number list = ', s, '\nTotal = ', total, '\nMean = ',
+# round(mean,2))
+
+# inf = open('poem_sp.txt', 'r')
+# sm = inf.readlines()
+# for i in range(len(sm)) :
+#     s=sm[i].strip(" ")
+#     slist = s.split()
+#     print(slist)
+# inf.close()
+
+# inf = open('poem.txt', 'r')
+# NumWord = []
+# for i in range(9):
+#     fline = inf.readline()
+#     flist = fline.split()
+#     NumWord.append(len(flist))
+# print(NumWord)
+# inf.close()
+
+# try:
+#     f = open('poem.txt', 'r')
+#     outf = open('numpoem.txt', 'w')
+# except IOError as err:
+#     print("unable to handle files")
+# Numword=[]
+# count=len(f.readlines())
+# f.close()
+# f = open('poem.txt', 'r')
+# for i in range(count) :
+#     fline=f.readline()
+#     flist=fline.split()
+#     outf.write(str(len(flist))+ "\n")
+# f.close()
+# outf.close()
+
+# import os
+# import shutil
+# shutil.copy('numpoem.txt', 'nump.txt')
+# os.remove('numpoem.txt')
+# try:
+#     inf = open('nump.txt', 'r')
+#     s = inf.readlines()
+#     sum = 0
+#     for i in range(len(s)) :
+#         sum = sum + int(s[i])
+#     print("평균 = ", sum/len(s))
+# except IOError as err:
+#     print("I/O error: {0}".format(err))
+# inf.close()
+
+# from tkinter import *
+# from tkinter import Tk, Canvas
+# from PIL import ImageTk, Image
+# root =Tk()
+# canvas = Canvas(root, width=400, height=300)
+# canvas.pack()
+# def oneclick(event) :
+#     im = Image.open('dog.jpeg')
+#     canvas.image = ImageTk.PhotoImage(im)
+#     canvas.create_image(0, 0, image=canvas.image, anchor='nw')
+# def doubleclick(event) :
+#     im = Image.open('cat.jpeg')
+#     canvas.image = ImageTk.PhotoImage(im)
+#     canvas.create_image(0, 0, image=canvas.image, anchor='nw')
+# widget = Button(None, text='Mouse Clicks')
+# widget.pack()
+# widget.bind('<Button-1>', oneclick)
+# widget.bind('<Double-1>', doubleclick)
+# root.mainloop()
+
+from tkinter import *
+from tkinter.colorchooser import *
+def NewFile() :
+    print("New File!")
+def OpenFile() :
+    print("Open File!")
+def About() :
+    print("This is a simple example of a menu")
+root = Tk()
+menu = Menu(root)
+root.config(menu=menu)
+filemenu = Menu(menu)
+menu.add_cascade(label="File", menu=filemenu)
+filemenu.add_command(label="New", command=NewFile)
+filemenu.add_command(label="Open...", command=OpenFile)
+filemenu.add_separator()
+filemenu.add_command(label="Exit", command=root.quit)
+helpmenu = Menu(menu)
+menu.add_cascade(label="Help", menu=helpmenu)
+helpmenu.add_command(label="About...", command=About)
+canvas = Canvas(root, width=500, height=500)
+color = "red"
+result = '#476042'
+def callback() :
+    global result
+    result = askcolor(title = "Colour Chooser")
+    result = result[1]
+button = Button(root, text='Choose Color', fg="darkgreen", command=callback)
+button.pack(side=LEFT, padx=10)
+lastx, lasty = 0, 0
+def xy(event) :
+    global lastx, lasty
+    lastx, lasty = event.x, event.y
+def addLine(event) :
+    global lastx, lasty
+    canvas.create_line((lastx, lasty, event.x, event.y), fill=result)
+    lastx, lasty = event.x, event.y
+root.columnconfigure(0, weight=1)
+root.rowconfigure(0, weight=1)
+canvas.pack()
+canvas.bind("<Button-1>", xy)
+canvas.bind("<B1-Motion>", addLine)
+root.mainloop()
