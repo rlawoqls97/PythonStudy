@@ -1,5 +1,4 @@
 from tkinter import *
-from tkinter import scrolledtext
 from tkinter.filedialog import *
 from tkinter import messagebox
 from tkinter.scrolledtext import *
